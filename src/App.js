@@ -10,7 +10,7 @@ function App() {
    <Nav/>
    <Container>
                 <Row>
-                  <Col size="xs-9 sm-10">
+                  <Col size="xs-12 lg-6">
              <Card/>
                   </Col>
                 </Row>
