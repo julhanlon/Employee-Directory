@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import "./style.css";
 import API from "../utils/API";
-import { Container, Row, Col } from "./Grid";
+
 
 function Employees () {
 // Setting our component's initial state
@@ -18,7 +18,6 @@ function Employees () {
 
    }
   return (
- 
      <div>
        {
   employees.map((employee) => {

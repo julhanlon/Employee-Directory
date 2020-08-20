@@ -10,9 +10,9 @@ const Button = (props) => {
 
   return (
     <button
-      className={`btn waves-effect waves-light ${props.color}`}
+      className={`btn waves-effect waves-light btn-dark ${props.color}`}
       style={styles.button}
-      onClick={props.click}
+      onClick={props.onClick}
     >
       {props.text}
     </button>
