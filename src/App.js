@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import './App.css';
 import Nav from "../src/components/Nav.js"
 import Employees from "./components/Employees.js"
-import { Container, Row, Col } from "./components/Grid";
 import Button from "./components/Button.js"
 import API from "./utils/API";
 
@@ -44,19 +43,33 @@ function App() {
   }
 
 
-  function sortNames() {
+//   function sortNames() {
+// employees.sort((a,b) => {
+//   if (a.name.last < b.name.last) {
+//     return -1;
+//   }
+//   if (a.name.last > b.name.last) {
+//     return 1;
+//   } return 0;
+// })
+//   }
 
-  }
+  function sortNames() {
+    employees.sort((a,b) => 
+    (a.name.last < b.name.last) ? -1 : 1)
+      setEmployees([...employees])
+    }
+  
 
   return (
     <div>
       <Nav />
 
       <div className="container">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
+        <div className="input-group mb-3 mt-5">
+          <div className="input-group-prepend">
           </div>
-          <input type="text" class="form-control" placeholder="Search by Name" onChange={handleInputChange} />
+          <input type="text" className="form-control" placeholder="Search by Last Name" onChange={handleInputChange} />
         </div>
           <div className="mt-5">
             <Button text={"Sort Name"} onClick={() => sortNames()} />
